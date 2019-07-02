@@ -30,6 +30,9 @@ Output  | A list of strings
 
             dataList[i][j] = lemmatizer.lemmatize(dataList[i][j])  # Calling Hazm Lemmatizer on the words list
 
+        
+        
+        #if !( Regex.IsMatch(Console.ReadLine(), "^[a-zA-Z0-9]*$") ):     # To check the wor
 
         dataList[i] = [word for word in dataList[i] if word.isalpha()] # Checking if the remained words consist of letters note numbers and etc. 
         dataList[i] = [w for w in dataList[i] if not(w in stop_words)] # Checking the stop words
