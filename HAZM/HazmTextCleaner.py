@@ -21,7 +21,7 @@ Output  | A list of strings
     dataList = Data
     table = str.maketrans('', '', punctuation)
     stop_words = stopwordsList
-
+    important_stopwords= [",",".","-","_"]
     for i in range(0, len(dataList)):
         vocabulary = []
         for j in range(0, len(dataList[i])):
@@ -29,7 +29,8 @@ Output  | A list of strings
             dataList[i][j] = stemmer.stem(dataList[i][j])  # Calling Hazm stemmer on the words list
 
             dataList[i][j] = lemmatizer.lemmatize(dataList[i][j])  # Calling Hazm Lemmatizer on the words list
-
+            for stop_word in important_stopwords:
+                dataList[i][j] = dataList[i][j].replace(stop_word,"")
         
         
         #if !( Regex.IsMatch(Console.ReadLine(), "^[a-zA-Z0-9]*$") ):     # To check the wor
