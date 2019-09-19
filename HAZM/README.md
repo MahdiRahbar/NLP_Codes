@@ -1,0 +1,1 @@
+This Python file, contains code snippet of text pre-processing based on Hazm Library.
